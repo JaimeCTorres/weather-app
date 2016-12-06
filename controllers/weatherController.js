@@ -10,7 +10,7 @@ function show(req, res) {
     //Extracting the LAT and LNG from the Google API's response object.
     var lng = response.data.results[0].geometry.location.lng
     var lat = response.data.results[0].geometry.location.lat
-    var key = '9cf3346ffe5923181917e1791c09ea8b'
+    var key = process.env.API_KEY
 
     //Using the LAT and LNG as paramaters in my next 3rd party API call.
     return axios.get(`https://api.darksky.net/forecast/${key}/${lat},${lng}`)

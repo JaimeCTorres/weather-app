@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="weatherApp" ng-cloak>
+<head>
+  <meta charset="UTF-8">
+  <title>Weather App</title>
+
+  <!-- Bootstrap CDN -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Angular CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.6/angular.min.js"></script>
+
+</head>
+
+<body ng-controller="climateController">
+
+  <div class="container">
+    <h1>What is your address?</h1>
+    <input type="text" ng-model="address">
+    <button ng-click="accessWeather()">Weather Please</button>
+
+    <div class="weatherResult">
+      <p>The current temperature is: <b>{{temp}}</b></p>
+      <p>The forecast for today is: <b>{{forecast}}</b></p>
+    </div>
+  </div>
+
+  <script src="./app.js"></script>
+  <script src="./controllers/climateController.js"></script>
+</body>
+</html>

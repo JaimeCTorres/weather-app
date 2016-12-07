@@ -5,7 +5,9 @@ var routes = require('./config/routes');
 var PORT = process.env.PORT || 3000;
 var app = express();
 
+//Allowing me access to my enviornment variables
 require('dotenv').load()
+
 // mount all routes with appropriate base paths
 app.use('/', routes);
 
